@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script>
+    //共通パーツ読み込み
+        $(function() {
+            $("#header").load("../header.html");
+            $("#footer").load("../footer.html");
+        });
+    </script>
+		<link href="member.css" rel="stylesheet">
+    
+		
+		<title>西澤技術株式会社</title>
+</head>
+<body>
+	<div class="loading">
+    <span class="circle">
+			<img src="../rogo.png" alt="極度に抽象化されているため画像表示ができません。" height="500px">
+		</span>
+		
+  </div>
+    <header id="header">
+    </header> 
+    
+    <h1>Member</h1>
+    
+    
+    <ul>
+        <h1><li>Boss</h1>
+        <div class="bio">
+            <div class="name">
+							西澤　啓之
+						</div>
+						<hr align="left" width="360px">
+						<div class="belong">
+							神
+						</div>
+						<div class="fadein">
+            	<img src="ni\zawa.png" alt="極度に抽象化されているため画像表示ができません。" width="200px">
+						</div>
+				</div>
+        </li>
+        </p>
+
+        <h1><li>社員</h1>
+            <ul>	
+							<div class="flex">
+								<div class="element">
+									<div class="bio">
+										<div class="name">
+											<li>中田　槙至
+										</div>
+										<hr align="left" width="360px">
+										<div class="belong">
+											大阪大学基礎工学部電子物理科学科エレクトロニクスコース
+										</div>
+										<img src="nakata\gosinei.jpg" alt="見ても飲んだくれが映ってるだけですよ？" width="300px">
+									</div>
+								</div> 
+
+								<div class="element">
+								<div class="bio">
+									<div class="name">
+										<li>近藤　桂祐
+									</div>
+									<hr align="left" width="360px">
+									<div class="belong">
+										京都大学工学部物理工学科機械システム学コース
+									</div>
+									<img src="kondo\kondo.png" alt="サイト管理者です。" width="300px">
+								</div>
+								</div>
+								
+								<div class="element">
+								<div class="bio">
+									<div class="name">
+										<li>植田　真理
+									</div>
+									<hr align="left" width="360px">
+									<div class="belong">
+										大阪公立大学工学部機械工学科
+									</div>
+									<img src="ueda\ueda.jpg" alt="見えないんなら見えないんです。" width="400px">
+								</div>
+              </div>
+
+								<div class="element">
+								<div class="bio">
+									<div class="name">
+										<li>中村　佳正
+									</div>
+									<hr align="left" width="360px">
+									<div class="belong">
+										ドラクエ
+									</div>
+									<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdq-dai.com%2F&psig=AOvVaw2pyy1M3X837HCkmAxHmBjr&ust=1678801333814000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCIisvLyE2f0CFQAAAAAdAAAAABAX">
+										<img src="nakamura/nakamura.png" alt="勇者なので見なくていいです。" width="300px">
+										<br>
+										
+									</a>
+								</div>
+								</div>
+							</div>  
+            </ul> 
+        </li>
+
+        <li><h2>顧客</h2>
+					<ul>
+						<div class="element">
+							<div class="bio">
+								<div class="name">
+									<li>太田　滝人
+								</div>
+								<hr align="left" width="360px">
+								<div class="belong">
+									関西外国語大学英語国際学部英語国際学科
+								
+								<img src="ota\ota.jpg" alt="剥げているため表示できません。" width="300px">
+								</div>
+							</div>
+						</div>
+					</ul>
+        </li>
+    </ul>
+		アニメーション回数:<span class="count"></div>
+
+			<div class="container">
+				<div class="block1">
+						ブロック1
+				</div>
+				<div class="block2">
+						ブロック2
+				</div>
+		</div>
+
+
+		
+		
+				<footer id="footer">
+				</footer>
+		<div class="box"></div>
+		<input class="button" type="button" value="動き給え！">
+		<a class="button2" herf="#">SAMPLE</a>
+
+
+    <!--以下java-->
+		<script>
+			var $box = $('.box');
+			/*var $button = $('.button');*/
+			var $count = $('.count');
+			var count = 1;
+
+			/*$button.on('click', function(){
+  		$box.toggleClass('active');
+			});*/
+
+			$box.on('transitionend', function(e){
+  			if (e.originalEvent.propertyName === 'width') {
+    			$count.text(count++);
+				}
+			});
+
+			$(function () {
+  $(window).scroll(function () {
+    const windowHeight = $(window).height();
+    const scroll = $(window).scrollTop();
+
+    $('.element').each(function () {
+      const targetPosition = $(this).offset().top;
+      if (scroll > targetPosition - windowHeight + 100) {
+        $(this).addClass("is-fadein");
+      }
+    });
+  });
+});
+		const loading = document.querySelector( '.loading' );
+  
+    window.addEventListener( 'load', () => {
+      loading.classList.add( 'hide' );
+    }, false );
+		</script>
+
+</body>
+</html>

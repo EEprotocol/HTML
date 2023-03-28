@@ -1,0 +1,116 @@
+header, footer{
+  background-color: rgba(255, 68, 0, 0.473);
+    color:rgb(255, 255, 255);
+}
+
+header .supertitle{
+    text-decoration: none;
+    font-family: "游ゴシック";
+    padding-left:20px;
+		color: rgb(255, 255, 255);
+		/*background:linear-gradient(-25deg, rgba(176, 236, 9, 0.774) 0%, rgb(212, 65, 20) 100%);*/
+}
+
+header .menubar{
+	background-color: #161616;
+	
+}
+
+body{
+    background-color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
+    --contentWidth: 1500px;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    padding: 0;
+}
+
+footer{
+
+}
+
+
+a{
+    color: rgb(255, 255, 255);
+    font-family: "游ゴシック";
+    text-decoration: none;
+}
+
+
+
+
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 10px 25px;
+    font-family: "Helvetica", monospace;
+    font-weight: bold;
+    font-weight: 200;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    outline: none;
+		transition-property: all;
+  	transition-duration: 3000ms;
+  	transition-delay: 10ms;
+		transition-timing-function: ease-in-out;
+   }
+   
+   .btn-1 {
+    background: linear-gradient(-15deg, rgba(16,16,16,1) 15%, rgba(12,25,180,1) 100%);
+   
+    border: none;
+		border: 2px solid;
+		border-color: #161616;
+		transition-property: all;
+  	transition-duration: 3000ms;
+  	transition-delay: 10ms;
+		transition-timing-function: ease-in-out;
+   }
+   
+   .btn-1:hover {
+    background: linear-gradient(-25deg, rgba(68, 0, 255, 0.774) 0%, rgb(212, 65, 20) 100%);
+    color: #ffffff;
+    transition-duration: 3000ms;
+   }
+
+   .custom-btn:hovor{
+    color:black;
+   }
+
+
+   /*loading*/
+   .loading {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: rgb(54, 54, 54);
+  }
+  .loading.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms;
+  }
+  .loading .circle {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin: 0.5em auto;
+    width: min-content;
+    display: inline-block;
+    animation: loading 3s linear infinite;
+  }
+  @keyframes loading {
+    0% { transform: rotate( 0deg ); }
+    100% { transform: rotate( 360deg ); }
+  }
