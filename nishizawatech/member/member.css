@@ -1,0 +1,173 @@
+body{
+    
+    color: rgb(0, 0, 0);
+    --contentWidth: 1500px;
+    margin-right: 12vw;
+    margin-left: 12vw;
+}
+
+
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px 50px;
+}
+
+.bio .name{
+  font-size: 40px;
+  font-family: "MS明朝";
+  font-weight: bold;
+}
+
+.bio .belong{
+  font-size: 20px;
+  font-family: "游ゴシック";
+  width: 380px;
+  word-wrap: wrap;
+  
+}
+
+.fadein{
+  animation-name:fadeInAnime ,moving;
+  animation-duration:2000ms,3000ms;
+  animation-fill-mode:none,forwards;
+  animation-iteration-count:1, infinite;
+  animation-delay: 0,5000ms;
+  animation-timing-function: ease-in-out;
+  overflow-x: hidden;
+  position: relative;
+  
+  
+}
+
+@keyframes fadeInAnime{
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes moving{
+  0%{
+    transform: translateX(0px);
+  }
+  10%{
+    transform: translateX(-2000px)
+  }
+  10.1%{
+    transform: translateX(2300px)
+  }
+  100%{
+    transform: translateX(0px)
+  }
+
+}
+
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  transition: all 300ms 0s ease;
+  animation: rotation 2s ease 0s 1 alternate none running;
+}
+
+/*.box:hover {
+  background: #ccc;
+  width: 300px;
+}*/
+
+@keyframes rotation {
+  0% {
+    transform: scale(.3);
+  }
+
+  50% {
+    transform: scale(.6) rotate(-45deg);
+    background: red;
+  }
+
+  100% {
+    transform: scale(1) rotate(180deg);
+    background: blue;
+  }
+}
+
+/*.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 10ms;
+  transition-timing-function: ease-in-out;
+}
+
+.active{
+  transform: translateX(300px);
+  background:#ff0000
+
+}
+
+.box:hover {
+  background: #ccc;
+  width: 500px;
+}*/
+
+
+.container{
+  border: 2px solid;
+}
+.block1{
+  background-color: cadetblue;
+  margin: 20px;
+}
+.block2{
+  background-color: darkorange;
+  padding: 20px;
+}
+
+.slide-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.3s 0s ease-out;
+}
+
+
+.text {
+  margin-bottom: 150px;
+}
+
+.element {
+  /* 最初は非表示 */
+  transform: translateX(30px);
+  opacity: 0;
+  transition: transform 1s, opacity 1s, visibility 1s;
+ 
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.button2 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #333;
+  padding: 18px 30px;
+  border-radius: 6px;
+  transition: .3s;
+}
+.button2:hover {
+  background: #13c3ac;
+  
+}

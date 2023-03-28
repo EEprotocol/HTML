@@ -1,0 +1,50 @@
+<link href="F,H.css" rel="stylesheet">
+<footer id="footer">
+    <center>
+    〒631‐852<br>
+    奈良市中登美ケ丘3丁目15－1<br>
+    Tel.0742-93-5111
+    </center>
+
+    <align="right">
+    <p style="text-align: right">
+        Copyright (c) All Right Released
+    </p>
+</footer>
+
+<!--以下java-->
+<script>
+    var $box = $('.box');
+    /*var $button = $('.button');*/
+    var $count = $('.count');
+    var count = 1;
+
+    /*$button.on('click', function(){
+  $box.toggleClass('active');
+    });*/
+
+    $box.on('transitionend', function(e){
+      if (e.originalEvent.propertyName === 'width') {
+        $count.text(count++);
+        }
+    });
+
+    $(function () {
+$(window).scroll(function () {
+const windowHeight = $(window).height();
+const scroll = $(window).scrollTop();
+
+$('.element').each(function () {
+const targetPosition = $(this).offset().top;
+if (scroll > targetPosition - windowHeight + 100) {
+$(this).addClass("is-fadein");
+}
+});
+});
+});
+const loading = document.querySelector( '.loading' );
+
+window.addEventListener( 'load', () => {
+loading.classList.add( 'hide' );
+}, false );
+</script>
